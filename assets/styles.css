@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(206, 250, 250);
+}
+
+.container{
+    height: 100vh!important;
+}
+
+main{
+    height: 100vh!important;
+}
+
+.hr{
+    height: 3px;
+    background-color: rgb(37, 134, 134)!important;
+}
+
+.card-title{
+font-family: 'Quicksand', sans-serif!important;
+}
+
+.UI{
+    color: rgb(37, 134, 134)!important ;
+}
