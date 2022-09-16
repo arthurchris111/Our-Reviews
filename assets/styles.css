@@ -22,3 +22,11 @@ font-family: 'Quicksand', sans-serif!important;
 .UI{
     color: rgb(37, 134, 134)!important ;
 }
+
+.fa-chevron-left:hover{
+color:  rgb(37, 134, 134)!important;
+}
+
+.fa-chevron-right:hover{
+color:  rgb(37, 134, 134)!important;
+}
