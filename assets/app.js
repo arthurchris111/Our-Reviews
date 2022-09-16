@@ -7,8 +7,8 @@ const nextButton = document.getElementById("nextButton");
 
 const reviews = [person = {
         id: 1,
-        img: 'img src="./70929863_2560581960831519_5638313021852876800_n.jpg" />',
-        name: 'Emmanuel',
+        img: './70929863_2560581960831519_5638313021852876800_n.jpg',
+        name: 'Christian',
         job: 'full stack web developer',
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna aliqua."
     },
@@ -62,6 +62,12 @@ const showPerson = (person) => {
     text.textContent = item.text
 }
 
+currentItem++
+if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+}
+showPerson(currentItem)
+
 nextButton.addEventListener("click", function () {
     currentItem++
     if (currentItem > reviews.length - 1) {
@@ -69,6 +75,7 @@ nextButton.addEventListener("click", function () {
     }
     showPerson(currentItem)
 })
+
 
 previousButton.addEventListener("click", function () {
     currentItem--
