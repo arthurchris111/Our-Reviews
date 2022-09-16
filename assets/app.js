@@ -9,7 +9,7 @@ const reviews = [person = {
         id: 1,
         name: 'Jonas',
         job: 'full stack web developer',
-        img: '<img src="./70929863_2560581960831519_5638313021852876800_n.jpg" class="rounded-circle" id="image" style="width: 150px;" alt="Avatar"/>',
+        img: './70929863_2560581960831519_5638313021852876800_n.jpg',
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna aliqua."
     },
 
@@ -17,7 +17,7 @@ const reviews = [person = {
         id: 2,
         name: 'Micheal',
         job: 'full stack web developer',
-        img: '<img src="https://mdbcdn.b-cdn.net/img/new/avatars/5.webp" class="rounded-3" style="width: 150px;" alt="Avatar" />',
+        img: 'https://mdbcdn.b-cdn.net/img/new/avatars/5.webp',
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna aliqua."
     },
 
@@ -25,7 +25,7 @@ const reviews = [person = {
         id: 3,
         name: 'Christian',
         job: 'full stack web developer',
-        img: 'img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" style="width: 150px;" alt="Avatar"/>',
+        img: 'https://mdbcdn.b-cdn.net/img/new/avatars/2.webp',
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna aliqua."
     },
 
@@ -56,7 +56,15 @@ const showPerson = (person) => {
 nextButton.addEventListener("click", function () {
     currentItem++
     if (currentItem > reviews.length - 1) {
-        return currentItem = 0;
+        currentItem = 0;
+    }
+    showPerson(currentItem)
+})
+
+previousButton.addEventListener("click", function () {
+    currentItem--
+    if (currentItem < 0) {
+        currentItem = reviews.length - 1;
     }
     showPerson(currentItem)
 })
